@@ -1,0 +1,310 @@
+@font-face {
+    font-family: "Cascadia";
+    src: url("/static/fonts/Cascadia.ttf");
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Cascadia;
+}
+.borde {
+    border: solid 1px black !important;
+}
+.bordetop {
+    border-top: solid 1px black !important;
+}
+.bordebot {
+    height: 25px;
+    border-top: solid 1px #ffffff !important;
+}
+.c {
+    text-align: center !important;
+}
+.just {
+    text-align: justify !important;
+}
+.r {
+    border-radius: 10px;
+}
+.footback {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* FONTS */
+
+.font {
+    font-family: Cascadia;
+    font-size: 2rem;
+}
+.font1 {
+    font-family: Cascadia;
+    color: #000000;
+}
+.fontli {
+    font-family: Cascadia;
+}
+.titulo3 {
+    font-size: 3rem;
+}
+.titulo4 {
+    font-size: 4rem;
+}
+.fromtop {
+    top: 90px;
+}
+.backform {
+    background: #888888;
+    border-radius: 2rem;
+}
+
+/* IMAGENS */
+
+.imgnav {
+    width: 20%;
+}
+.imgobj {
+    width: 40%;
+}
+.imgobj1 {
+    width: 100%;
+}
+.imgobj2 {
+    width: 80%;
+}
+.imgbutt {
+    width: 100%;
+    border-radius: 7px;
+}
+.imginsc2 {
+    width: 50%;
+}
+.imginsc3 {
+    width: 70%;
+}
+.imgred {
+    width: 100px;
+    padding: 10px;
+}
+.imgicont {
+    width: 100px;
+    padding: 10px;
+}
+.imgform {
+    width: 150px;
+}
+.imginsc {
+    padding-top: 15px;
+    width: 100%;
+}
+.imginsc1 {
+    width: 40%;
+}
+
+/* RESPONSIVE */
+/* Devices under 1599px (xl) */
+@media (max-width: 2000.98px) {
+    .imgred2 {
+        width: 100%;
+        padding: 5px;
+    }
+}
+/* Devices under 1599px (xl) */
+@media (max-width: 1500.98px) {
+    .imgred2 {
+        width: 100%;
+        padding: 5px;
+    }
+}
+/* Devices under 1199px (xl) */
+@media (max-width: 991.98px) {
+    .imgred2 {
+        width: 100%;
+
+    }
+}
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+    .imgred2 {
+        width: 30%;
+
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    font-size: 1.15rem;
+    font-weight: 200;
+    letter-spacing: .05rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+.nav-item {
+    padding: .4rem;
+}
+.nav-link {
+    color: #4D4D4D !important;
+}
+.nav-link.active,
+.nav-link:hover {
+    color: #000000 !important;
+}
+
+/* Counterdown */
+
+.marco {
+    background-color: #AFDAE1;
+}
+.marco2 {
+    background-color: #4D4D4D;
+}
+.marcofont {
+    color: #000000;
+}
+.marcofont1 {
+    color: #ffffff;
+}
+.objetivstit {
+    color: #AFDAE1;
+}
+.objetivs {
+    color: black;
+    font-family: "HelveticaRoundedLTStd-Bd";
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.mbup {
+    margin-top: -15%;
+}
+.mbuplett {
+    color: #FBFBE2;
+    font-family: "HelveticaRoundedLTStd-Bd";
+    font-size: 1.0rem;
+    font-weight: 300;
+}
+.colfond {
+    background-color: rgb(57, 169, 0, 0.3);
+}
+
+
+/* INSCRIPTION */
+/* FIXED BACKGOUND */
+.fixed {
+    background-image: url('../img/backgrounds/5.png');
+    position: fixed;
+}
+.fixed-background {
+    padding: 5rem 0;
+}
+.inscback {
+    background-color: rgb(57, 169, 0, 0.3);
+    border-radius: 2rem;
+}
+#onhover {
+    display: none;
+}
+#surround:hover span[id="initial"] {
+    display: none;
+}
+#surround:hover span[id="onhover"] {
+    display: block;
+}
+
+/* EQUIPO COMUNICACION */
+.fixed2 {
+    background-image: url('../img/backgrounds/vector3.jpg');
+    position: fixed;
+}
+.fixed-background2 {
+    padding: 5rem 0;
+}
+.imgcomm {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 5px 10px #888888;
+}
+
+/* Contact */
+.contact {
+    background-color: #AFDAE1;
+    color: black;
+    margin-top: 20px;
+}
+
+/* back-to-top */
+.backtotop {
+    width: 40pt;
+    height: auto;
+    position: fixed;
+    bottom: 4.50rem;
+    right: 1.75rem;
+    z-index: 15;
+}
+.backtotop:hover {
+    color: transparent;
+    background-color: transparent;
+}
+
+/* CATEGORY */
+.topmar {
+    top: 20%;
+}
+.filmtxt {
+    background-color: rgb(0, 175, 0, 0.3);
+    color: #000000;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px #ffffff;
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+/*-- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  
+  /*-- Fixed Background Image --*/
+  .fixed-background {
+    position: relative;
+    width: 100%;
+    z-index: 12!important;
+  }
+  .fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999 !important;
+  }
+  .fixed {
+    z-index: -999!important;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+  }

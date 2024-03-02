@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<div class="col-12 mx-auto ">
+    <div class="col-10 mx-auto">
+        <div class="row">
+            <div class="col-3 mx-auto mt-3 c">
+                <img src="static/img/icons/Sena.png" class="imginsc2" alt="CSV" />
+            </div>
+            <div class="col-9 mx-auto mt-3 c">
+                <h1 class="titulo3">Aplicativo para generar codigos qr</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="col-12 mx-auto mt-5 mb-5">
+    <div class="col-8 mx-auto p-5 backform">
+
+        <form action="" method="POST" enctype="multipart/form-data">
+
+            <div class="col-lg-6 col-sm-10 mx-auto">
+                <div class="mb-3">
+                    <label for="address" class="form-label">Ingrese texto o dirección web</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-10 mx-auto">
+                <div class="mb-3">
+                    <label for="fileName" class="form-label">Ingrese el nombre final del codigo qr</label>
+                    <input type="text" class="form-control" id="fileName" name="fileName" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-10 mx-auto">
+                    <div class="mb-3">
+                        <label for="box_size" class="form-label">Tamaño de la caja</label>
+                        <input type="text" class="form-control" id="box_size" name="box_size">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-10 mx-auto">
+                    <div class="mb-3">
+                        <label for="border" class="form-label">Tamaño del borde</label>
+                        <input type="text" class="form-control" id="border" name="border">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-10 mx-auto">
+                    <div class="mb-3">
+                        <label for="fill" class="form-label">Color de Pixel</label>
+                        <input type="text" class="form-control" id="fill" name="fill">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-10 mx-auto">
+                    <div class="mb-3">
+                        <label for="back_color" class="form-label">Color de fondo</label>
+                        <input type="text" class="form-control" id="back_color" name="back_color">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-10 mx-auto">
+                <div class="mb-3">
+                    <label for="imgcenter" class="form-label">Ingrese imagen para el centro</label>
+                    <input type="file" class="form-control" id="imgcenter" name="imgcenter">
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-sm-10 mx-auto d-grid gap-2 mt-5">
+                <input class="btn btn-success" type="submit" value="GENERAR QR">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-12 mx-auto mt-5 mb-5 ">
+        {% if imgList %}
+        <div class="col-11 mx-auto mt-3 mb-5">
+            <div class="col-11 mx-auto mt-3 mb-5 c">
+                <h4>Imagenes previas en disco local</h4>
+            </div>
+
+            <div class="row">
+                {% for item in imgList %}
+                <div class="col prod">
+                    <div class="card prod">
+                        <div class="card-body">
+                            <p class="card-text atxt3">{{ item }}</p>
+                            <img src="{{ item }}" class="imgbutt" alt="CSV" />
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+
+{% endblock %}

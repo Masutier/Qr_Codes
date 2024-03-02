@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/all.css">
+
+    <link rel="icon" type="images/x-icon" href="static/img/icons/Sena.png" />
+    {% if title %}
+        <title>Codigo Qr - {% block title %}{% endblock %}</title>
+    {% else %}
+        <title>Codigo Qr</title>
+    {% endif %}
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'partials/contact.html' %}
+    {% include 'partials/backtop.html' %}
+    {% include 'partials/footer.html' %}
+
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+</html>
