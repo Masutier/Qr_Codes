@@ -7,7 +7,7 @@
     <div class="col-10 mx-auto">
         <div class="row">
             <div class="col-3 mx-auto mt-3 c">
-                <img src="static/img/icons/Sena.png" class="imginsc2" alt="CSV" />
+                <img src="static/img/icons/qr.png" class="imginsc2" alt="CSV" />
             </div>
             <div class="col-9 mx-auto mt-3 c">
                 <h1 class="titulo3">Aplicativo para generar codigos qr</h1>
@@ -18,9 +18,8 @@
 
 <hr>
 
-<div class="col-12 mx-auto mt-5 mb-5">
+<div class="col-11 mx-auto mt-5 mb-5">
     <div class="col-8 mx-auto p-5 backform">
-
         <form action="" method="POST" enctype="multipart/form-data">
 
             <div class="col-lg-6 col-sm-10 mx-auto">
@@ -63,10 +62,18 @@
 
                 <div class="col-lg-6 col-sm-10 mx-auto">
                     <div class="mb-3">
-                        <label for="back_color" class="form-label">Color de fondo</label>
+                        <label for="back_color" class="form-label">Color de Fondo</label>
                         <input type="text" class="form-control" id="back_color" name="back_color">
                     </div>
                 </div>
+            </div>
+
+            <div class="col-lg-8 col-sm-10 mx-auto c">
+                <p class="smfont">Entrada de colores en formato hex (#0000ff) o nombre (blue)</p>
+            </div>
+
+            <div class="col-lg-8 col-sm-10 mx-auto">
+                <p class="c smfont">Al añadir imagen en el centro al QR, el Color de Fondo tiene que ser diferente a blanco "#ffffff" o "white" o la imagen central sale pixelada.</p>
             </div>
 
             <div class="col-lg-6 col-sm-10 mx-auto">
@@ -82,30 +89,6 @@
 
         </form>
     </div>
-
-    <div class="col-12 mx-auto mt-5 mb-5 ">
-        {% if imgList %}
-        <div class="col-11 mx-auto mt-3 mb-5">
-            <div class="col-11 mx-auto mt-3 mb-5 c">
-                <h4>Imagenes previas en disco local</h4>
-            </div>
-
-            <div class="row">
-                {% for item in imgList %}
-                <div class="col prod">
-                    <div class="card prod">
-                        <div class="card-body">
-                            <p class="card-text atxt3">{{ item }}</p>
-                            <img src="{{ item }}" class="imgbutt" alt="CSV" />
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-    </div>
-
 </div>
 
 
