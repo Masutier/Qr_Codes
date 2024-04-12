@@ -2,7 +2,7 @@ import os
 import json
 import qrcode as qr
 from PIL import Image
-from flask import Flask, flash, render_template as render, redirect, request
+from flask import Flask, flash, render_template as render, request, redirect, send_file
 from forms import QrCodeForm
 
 # evaluacion
@@ -37,7 +37,8 @@ def home():
         box_size = box_size or 10
         border = border or 3
         fill_color = fill or 'black'
-        back_color = back_color or 'white'
+        if back_color == "#000000":
+            back_color = 'white'
 
         code = qr.QRCode(version=1, box_size=box_size, border=border)
         code.add_data(address)
@@ -49,9 +50,24 @@ def home():
             offset = ((img.size[0] - 75) // 2, (img.size[1] - 75) // 2)
             img.paste(logo, offset, mask=logo.split()[3] if logo.mode == 'RGBA' else None)
 
-        img.save("static/images/" + fileName + ".png")
+        image = "static/images/" + fileName + ".png"
+        img.save(image)
+
+        send_file(image, as_attachment=True)
+        flash("El Qr se creo y se descargo muy bien!!")
+        return redirect('/')
 
     return render("index.html", title="Home", form=form, imgList=imgList)
+
+
+@app.route('/delete_history')
+def delete_history():
+    for file in os.listdir("static/images/"):
+        if file.endswith('.png'):
+            os.remove("static/images/" + file)
+    flash("La historia fue eliminada satisfactoriamente!!")
+    
+    return redirect('/')
 
 
 if __name__ == '__main__':
